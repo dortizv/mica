@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 24th Birthday!</title>
+    <style>
+        :root {
+            --bg-color: #f5f5f5;
+            --text-color: #333333;
+            --accent-color: #a67c52;
+            --secondary-color: #8c7851;
+        }
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: serif;
+            line-height: 1.6;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .video-container video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .header-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: var(--bg-color);
+            z-index: 1;
+            width: 90%;
+        }
+        h1 {
+            font-size: 2.5em;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin: 0;
+            opacity: 0.8;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        section {
+            margin: 80px 0;
+        }
+        h2 {
+            color: var(--accent-color);
+            font-size: 1.8em;
+            font-weight: 300;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        .message {
+            margin: 40px 0;
+            padding-left: 20px;
+            border-left: 2px solid var(--secondary-color);
+        }
+        #gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-gap: 20px;
+        }
+        .gallery-item {
+            position: relative;
+            width: 100%;
+            padding-top: 100%; /* 1:1 Aspect Ratio */
+            overflow: hidden;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .gallery-item img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.9);
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            max-height: 80vh;
+        }
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: 300;
+            transition: 0.3s;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <video autoplay loop muted playsinline>
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="header-content">
+            <h1>Felices 24 años</h1>
+            <h1>mi pulga ❤️‍🩹</h1>
+        </div>
+    </div>
+
+    <div class="content">
+        <section>
+            <h2>Micaela</h2>
+            <p style="justify-content: center;">
+                En tu cumpleaños veinticuatro, es importante que entiendas lo mucho que has crecido (no en talla, pero si en corazón), lo mucho que estás progresado, y lo mucho que te amamos y lo orgullosos que estamos tu familia y yo de la excelente mujer en la que te estás convirtiendo.</p>
+            <p>
+                Eres realmente una persona muy especial, con el corazón más lindo, la mente más ágil y el amor más grande de este mundo. Yo creo que no existen palabras para describir lo mucho que significas para mí, y el grán amor, cariño, respeto y admiración que siento por tí; pero sobre todo, no hay palabras para describir lo agradecido que estoy contigo por permitirme ser parte de tu vida, y poder compartir contigo la mía.
+            </p>
+            <p>
+                Cuando los días se tornen grises recuerdalo; recuerda lo importante y lo mucho que significas para tus amigos, tu familia y para mí. Lo mucho que queremos verte realizada como profesional. Lo mucho que queremos verte cumplir tus sueños. Lo mucho que queremos verte sonriendo y disfrutando de la vida. Lo mucho que queremos verte sana. Y sobre todo, lo mucho que queremos verte feliz.
+            </p>
+            <p>
+                En lo personal, eres de las personas más importantes e influyentes que han llegado a mi vida, por ello te tendré atesorada en mi corazón por siempre. Y como muestra de ello, te obsequio este pedacito de mí, y en el que he puesto todo lo que no hubiera podido logrado sin tí. Te amo mi Puki.
+            </p>
+                <p>Wito.</p>
+        </section>
+
+        <section>
+            <h2>Tus fieles seguidores</h2>
+            <div class="message">
+                <p><strong>Friend 1:</strong> [Friend 1's message]</p>
+            </div>
+            <div class="message">
+                <p><strong>Friend 2:</strong> [Friend 2's message]</p>
+            </div>
+            <!-- Add more messages as needed -->
+        </section>
+
+        <section>
+            <h2>Te amamos</h2>
+            <div id="gallery">
+                <!-- Images will be dynamically added here -->
+            </div>
+        </section>
+
+        <section>
+            <h2>Final Thoughts</h2>
+            <p>[Your last words go here. This is a great place for a final, touching message or wish.]</p>
+        </section>
+    </div>
+
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script>
+        // Animations
+        gsap.from(".header-content", {opacity: 0, y: -50, duration: 1.5});
+        gsap.from(".content section", {opacity: 0, y: 50, duration: 1, stagger: 0.3});
+
+        // Dynamic Photo Gallery
+        const galleryImages = [
+            "IMG-20240909-WA0025.jpg",
+            "IMG-20240909-WA0026.jpg",
+            "IMG-20240909-WA0027.jpg",
+            "IMG-20240909-WA0028.jpg",
+            "IMG-20240909-WA0029.jpg",
+            "IMG-20240909-WA0030.jpg",
+            "IMG-20240909-WA0032.jpg",
+            "IMG-20240909-WA0033.jpg",
+            "IMG-20240909-WA0034.jpg",
+            "IMG-20240909-WA0035.jpg",
+            "IMG-20240909-WA0036.jpg",
+            "IMG-20240909-WA0037.jpg",
+            "IMG-20240909-WA0038.jpg",
+            "IMG-20240909-WA0040.jpg",
+            "IMG-20240909-WA0041.jpg",
+            "IMG-20240909-WA0043.jpg",
+            "IMG-20240909-WA0044.jpg",
+            "IMG-20240909-WA0045.jpg",
+            "IMG-20240909-WA0046.jpg",
+            "IMG-20240909-WA0047.jpg",
+            "IMG-20240909-WA0048.jpg",
+            "IMG-20240909-WA0049.jpg",
+            "IMG-20240909-WA0051.jpg"
+        ];
+
+        const gallery = document.getElementById("gallery");
+        galleryImages.forEach(src => {
+            const item = document.createElement("div");
+            item.className = "gallery-item";
+            const img = document.createElement("img");
+            img.src = src;
+            img.alt = "Birthday Memories";
+            item.appendChild(img);
+            item.onclick = function() {
+                openModal(src);
+            };
+            gallery.appendChild(item);
+        });
+
+        // Modal functionality
+        const modal = document.getElementById("myModal");
+        const modalImg = document.getElementById("img01");
+        const span = document.getElementsByClassName("close")[0];
+
+        function openModal(src) {
+            modal.style.display = "block";
+            modalImg.src = src;
+        }
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
